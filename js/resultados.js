@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const tabla = document.getElementById("tablaResultados");
 
-  fetch("http://127.0.0.1:8000/resultados/")
+  fetch("https://ravishing-charisma-production-e81c.up.railway.app/resultados/")
     .then((res) => res.json())
     .then((data) => {
       tabla.innerHTML = "";

@@ -5,7 +5,7 @@ document.getElementById("formRegistro").addEventListener("submit", async (e) => 
   const correo = document.getElementById("correo").value;
   const password = document.getElementById("password").value;
 
-  const res = await fetch("http://127.0.0.1:8000/registro", {
+  const res = await fetch("https://ravishing-charisma-production-e81c.up.railway.app/registro", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify({ nombre, correo, password })

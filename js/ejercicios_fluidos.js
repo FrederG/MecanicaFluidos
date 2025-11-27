@@ -1,9 +1,9 @@
-console.log("💧 Script de ejercicios Fluidos para todos cargado correctamente con FastAPI");
+console.log("💧 Script de ejercicios Fluidos conectado correctamente con FastAPI en Railway");
 
 // ------------------------------
 // CONFIGURACIÓN
 // ------------------------------
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://ravishing-charisma-production-e81c.up.railway.app";
 let nombreUsuario = "invitado";
 
 try {
@@ -12,6 +12,7 @@ try {
 } catch (e) {
   console.warn("Usuario no válido en localStorage");
 }
+
 let ejercicioActual = 0;
 const ejercicios = document.querySelectorAll(".ejercicio");
 const btnAnterior = document.getElementById("btnAnterior");
@@ -50,7 +51,7 @@ mostrarEjercicio(ejercicioActual);
 // Verificar y enviar respuestas
 // ------------------------------
 async function verificarRespuesta(preguntaId, event) {
-  event?.preventDefault(); // Evita que se recargue la página
+  event?.preventDefault();
 
   const input = document.getElementById(`respuesta${preguntaId}`);
   const resultado = document.getElementById(`resultado${preguntaId}`);
@@ -64,14 +65,14 @@ async function verificarRespuesta(preguntaId, event) {
 
   try {
     const response = await fetch(`${API_URL}/guardar_resultado/`, {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    usuario: nombreUsuario,
-    ejercicio: preguntaId,
-    respuesta: respuesta
-  })
-});
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        usuario: nombreUsuario,
+        ejercicio: preguntaId,
+        respuesta: respuesta
+      })
+    });
 
     const data = await response.json();
 
