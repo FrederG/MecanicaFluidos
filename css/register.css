@@ -1,0 +1,106 @@
+
+.form_section {
+    /* Mismo estilo de contenedor principal que .about_section o .ejercicios-container */
+    background-color: rgba(131, 130, 130, 0.9);
+    width: 90%;
+    max-width: 420px; /* Ancho típico para formularios */
+    margin: 80px auto; /* Centrado vertical y horizontalmente */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.form_section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4a90e2; /* Color de acento */
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(74, 144, 226, 0.3);
+    padding-bottom: 10px;
+}
+
+/* Estilos de los inputs */
+.form_section form input[type="text"],
+.form_section form input[type="email"],
+.form_section form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.05); /* Fondo muy oscuro y sutil */
+    color: #fff;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form_section form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form_section form input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+}
+
+/* Estilo del botón de registro */
+.form_section form button[type="submit"] {
+    width: 100%;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    margin-top: 5px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.22s ease, transform 0.08s ease, box-shadow 0.22s ease;
+}
+
+.form_section form button[type="submit"]:hover {
+    background-color: #357ABD;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Enlace de "¿Ya tienes cuenta?" */
+.form_section p {
+    color: #e5e7e9;
+    font-size: 0.95rem;
+    margin-top: 25px;
+}
+
+.form_section p a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.form_section p a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 500px) {
+    .form_section {
+        width: 95%;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .form_section h2 {
+        font-size: 1.8rem;
+    }
+
+    .form_section form button[type="submit"] {
+        font-size: 1rem;
+    }
+}

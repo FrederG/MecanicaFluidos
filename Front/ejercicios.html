@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ejercicios | Fluidos para todos</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/ejercicios_fluidos.js"></script>
+</head>
+<body>
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar custom_nav-container">
+                <a class="navbar-brand" href="index.html"><span>Fluidos para todos</span></a>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="ejercicios.html">Ejercicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resultados.html">Mis Resultados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="retroalimentacion.html">Retroalimentación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about_section layout_padding">
+        <div class="container ejercicios-container">
+            <h2 class="section_title"> Ejercicios Interactivos</h2>
+            <p class="intro-text">
+                Resuelve los ejercicios uno por uno y refuerza tus conocimientos sobre <strong>Mecánica de Fluidos</strong>.
+            </p>
+
+            <div class="ejercicio">
+                <h3>Ejercicio 1</h3>
+                <img src="/img/1.png" alt="Diagrama de flujo" style="max-width:100%; height:auto; border-radius:10px; margin-bottom:10px; margin-left: 50px;">
+                <p>Calcule la velocidad del fluido en el punto A y su gasto, de un flujo volumétrico de agua a 5°C pasa por el sistema ilustrado en la imagen:</p>
+                <input type="number" id="respuesta1" placeholder="Tu respuesta (m/s)">
+                <button onclick="verificarRespuesta(1, event)">Verificar</button>
+                <p id="resultado1" class="resultado"></p>
+                <div class="semaforo" id="semaforo1"></div>
+            </div>
+
+            <div class="ejercicio">
+                <h3>Ejercicio 2</h3>
+                <img src="/img/2.png" alt="Diagrama 2" style="max-width:100%; height:auto; border-radius:10px; margin-bottom:10px; margin-left: 50px;">
+                <p>El agua fluye por la rampa mostrada en el canal de la figura. La anchura del canal disminuye de 15 pies en la sección (1) a 9 pies en la sección (2). Para las condiciones mostradas, determinar el caudal.</p>
+                <input type="number" id="respuesta2" placeholder="Tu respuesta (m³/s)">
+                <button onclick="verificarRespuesta(2, event)">Verificar</button>
+                <p id="resultado2" class="resultado"></p>
+                <div class="semaforo" id="semaforo2"></div>
+            </div>
+
+            <div class="ejercicio">
+                <h3>Ejercicio 3</h3>
+                <img src="/img/7.png" alt="Diagrama 3" style="max-width:100%; height:auto; border-radius:10px; margin-bottom:10px; margin-left: 50px;">
+                <p> Un tubo de Venturi tiene un diámetro de 0.1524m y una presión de 4.2x10^4 N/m2 en su parte más ancha. En el estrechamiento, el diámetro es de 0.07662 m y la presión es de 3x10^4 N/m2 ¿Cuál es la velocidad del agua que fluye a través de la tubería?</p>
+                <input type="number" id="respuesta3" placeholder="Tu respuesta (m/s)">
+                <button onclick="verificarRespuesta(3, event)">Verificar</button>
+                <p id="resultado3" class="resultado"></p>
+                <div class="semaforo" id="semaforo3"></div>
+            </div>
+
+            <div class="ejercicio">
+                <h3>Ejercicio 4</h3>
+                <img src="/img/4.png" alt="Diagrama de flujo" style="max-width:100%; height:auto; border-radius:10px; margin-bottom:10px; margin-left: 50px;">
+                <p>El tubo mostrado en la figura tiene un diámetro de 16 (cm) en la sección 1 y 10 (cm) en la sección 2. En la sección 1 la presión es de 200 [kPa]. El punto 2 está 6 [m] más alto que el punto 1. Si un aceite de densidad 800 (km/m³] fluye con una rapidez de 0.03 [m³/s), encuentre la presión en el punto 2 si los efectos de la viscosidad son despreciables.:</p>
+                <input type="number" id="respuesta4" placeholder="Tu respuesta (KPa)">
+                <button onclick="verificarRespuesta(4, event)">Verificar</button>
+                <p id="resultado4" class="resultado"></p>
+                <div class="semaforo" id="semaforo4"></div>
+            </div>
+
+            <div class="ejercicio">
+                <h3>Ejercicio 5</h3>
+                <img src="/img/5.png" alt="Diagrama 5" style="max-width:100%; height:auto; border-radius:10px; margin-bottom:10px; margin-left:50px;">
+                <p>(Teorema de Torricelli). En la figura adjunta se muestra una tubería descargando agua con un gasto de 1.5 litros por segundo, en un tanque A de 120 cm de diámetro, que descarga a través de una llave de ½ pulgada hacia un tanque B de 60 cm de diámetro y 90 cm de altura (h₃). El tanque A está sobre un pedestal de h₂ = 1.5 m. Calcular:</p>
+                <ul>
+                    <li> Altura a la cual el nivel del agua en el tanque A se estabiliza.</li>
+                    <li> Velocidad a la cual llega el agua al tanque B.</li>
+                    <li> Tiempo en que tarda en llenarse el tanque B.</li>
+                </ul>
+
+                <p><strong>5)</strong> Altura de estabilización (m):</p>
+                <input type="number" id="respuesta5" placeholder="Tu respuesta (m)">
+                <button onclick="verificarRespuesta(5, event)">Verificar</button>
+                <p id="resultado5" class="resultado"></p>
+
+                <p><strong>6)</strong> Velocidad del agua al tanque B (m/s):</p>
+                <input type="number" id="respuesta6" placeholder="Tu respuesta (m/s)">
+                <button onclick="verificarRespuesta(6, event)">Verificar</button>
+                <p id="resultado6" class="resultado"></p>
+
+                <p><strong>7)</strong> Tiempo de llenado del tanque B (s):</p>
+                <input type="number" id="respuesta7" placeholder="Tu respuesta (s)">
+                <button onclick="verificarRespuesta(7, event)">Verificar</button>
+                <p id="resultado7" class="resultado"></p>
+            </div>
+
+            <div class="ejercicio">
+                <h3>Ejercicio 6 (Sifón)</h3>
+                <img src="/img/8.jpg" alt="Diagrama Sifón" style="max-width:100%; height:auto; border-radius:10px; margin-bottom:10px; margin-left: 50px;">
+                <p> 
+                    8. Un sifón de diámetro uniforme se usa para drenar agua de un tanque, como se ilustra e
+                    n la figura. Suponga flujo estable sin fricción. Si h = 1.00 m, encuentre la rapidez del flujo de salida en el extremo del sifón. 
+                </p>
+                <input type="number" id="respuesta8" placeholder="Respuesta 8 (m/s)">
+                <button onclick="verificarRespuesta(8, event)">Verificar (8)</button>
+                <p id="resultado8" class="resultado"></p>
+
+                <p>
+                    <strong>9.</strong>  ¿Qué pasaría si? ¿Cuál es la limitación en la altura de la parte superior del sifón
+ sobre la superficie del agua? (Para que el flujo del líquido sea continuo, la presión no
+ debe caer abajo de la presión de vapor del líquido.)
+
+                </p>
+                <input type="number" id="respuesta9" placeholder="Respuesta 9 (m)">
+                <button onclick="verificarRespuesta(9, event)">Verificar (9)</button>
+                <p id="resultado9" class="resultado"></p>
+            </div>
+            
+            <div class="ejercicio">
+                <h3>Ejercicio 7 (Tubo de Pitot)</h3>
+                <img src="/img/9.png" alt="Diagrama Tubo de Pitot" style="max-width:100%; height:auto; border-radius:10px; margin-bottom:10px; margin-left: 50px;">
+                <p> 10. Para medir la magnitud de la velocidad de la corriente en un rió se introduce un tubo de Pitot. Si la altura a la que llega el agua dentro del tubo es de 0.20 m ¿a qué magnitud de velocidad va la corriente?</p>
+                <input type="number" id="respuesta10" placeholder="Tu respuesta (m/s)">
+                <button onclick="verificarRespuesta(10, event)">Verificar</button>
+                <p id="resultado10" class="resultado"></p>
+                <div class="semaforo" id="semaforo10"></div>
+            </div>
+
+            <div class="ejercicio">
+                <h3>Ejercicio 8 (Venturi)</h3>
+                <img src="/img/10.png" alt="Diagrama Tubo de Venturi" style="max-width:100%; height:auto; border-radius:10px; margin-bottom:10px; margin-left:50px;">
+                <p>
+                     Un tubo de Venturi posee un area transversal de 30 cm3 en la parte mas amplia y
+ de 10 cm2en la parte mas estrecha. FLuye agua en el tubo, cuyo caudal es de 4 L/s,
+ calcular:
+                </p>
+
+                <p><strong>12)</strong> La rapidez del fluido en la parte amplia y estrecha</p>
+                <input type="number" id="respuesta12" placeholder="Tu respuesta (m/s)">
+                <button onclick="verificarRespuesta(12, event)">Verificar (12)</button>
+                <p id="resultado12" class="resultado"></p>
+
+                <p><strong>13)</strong>  La diferencia de presion en este trozo </p>
+                <input type="number" id="respuesta13" placeholder="Tu respuesta (Pa)">
+                <button onclick="verificarRespuesta(13, event)">Verificar (13)</button>
+                <p id="resultado13" class="resultado"></p>
+
+                <p><strong>14)</strong> La diferencia de altura h:</p>
+                <input type="number" id="respuesta14" placeholder="Tu respuesta (cm))">
+                <button onclick="verificarRespuesta(14, event)">Verificar (14)</button>
+                <p id="resultado14" class="resultado"></p>
+            </div>
+
+            <div class="ejercicio">
+                <h3>Ejercicio 15 (Mecánica de Fluidos General)</h3>
+                <img src="/img/15.png" alt="Diagrama Mecánica de Fluidos General" style="max-width:100%; height:auto; border-radius:10px; margin-bottom:10px; margin-left: 50px;">
+                <p>El pequeño tubo de salida de un tanque de agua está a 3 m por debajo de la
+ superficie del agua. Calcule la velocidad de salida del agua.</p>
+                <input type="number" id="respuesta15" placeholder="Tu respuesta (m/s)">
+                <button onclick="verificarRespuesta(15, event)">Verificar</button>
+                <p id="resultado15" class="resultado"></p>
+                <div class="semaforo" id="semaforo15"></div>
+            </div>
+            
+               <div class="ejercicio">
+                <h3>Ejercicio 16 (Mecánica de Fluidos General)</h3>
+                <img src="/img/16.png" alt="Diagrama Mecánica de Fluidos General" style="max-width:100%; height:auto; border-radius:10px; margin-bottom:10px; margin-left: 50px;">
+                <p> ¿Cuál es la velocidad del agua que circulará por ese orificio, si el tinaco tiene una
+ altura de 2 metros, pero el nivel del agua se encuentra a 1.6 m de la llave?
+</p>
+                <input type="number" id="respuesta16" placeholder="Tu respuesta m/s">
+                <button onclick="verificarRespuesta(16, event)">Verificar</button>
+                <p id="resultado16" class="resultado"></p>
+                <div class="semaforo" id="semaforo16"></div>
+            </div>
+
+
+            <div class="nav-ejercicios">
+                <button id="btnAnterior">⬅️ Anterior</button>
+                <span id="contador"></span>
+                <button id="btnSiguiente">Siguiente ➡️</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer_section">
+        <div class="container text-center">
+            <p>© 2025 Fluidos para todos | Ingeniería Civil UTB</p>
+        </div>
+    </footer>
+</body>
+</html>
